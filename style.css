@@ -97,6 +97,7 @@ body {
 /* Discord button */
 .discord {
   background: #5865f2;
+  color: black;
 }
 .discord:hover {
   background: #4752c4;
@@ -105,11 +106,13 @@ body {
 /* MAIN SITE button */
 .btn.main {
   background: rgba(0, 195, 255, 0.2);
+  color: black;
 }
 
 /* SITE 2 button */
 .btn.site2 {
   background: rgba(255, 0, 170, 0.2);
+  color: black;
 }
 
 /* SITE 3 button */
