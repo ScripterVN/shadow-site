@@ -1,135 +1,236 @@
-/* Reset */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
 body {
-  background: black;
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #0a0a0a;
   color: white;
-  font-family: 'Orbitron', sans-serif;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  min-height: 100vh;
-  text-align: center;
-  overflow: hidden;
+  overflow-x: hidden;
 }
 
-/* Moon GIF background */
-.stars {
+/* 🔥 Animated background logo */
+.background-logo {
   position: fixed;
-  width: 100%;
-  height: 100%;
-  background: url("images/moon.gif") no-repeat center center/cover;
+  top: 50%;
+  left: 50%;
+  width: 600px;
+  height: 600px;
+  background: url("mages/logo.png") no-repeat center;
+  background-size: contain;
+  opacity: 0.05;
+  transform: translate(-50%, -50%) scale(1);
+  animation: pulse 8s infinite ease-in-out;
   z-index: -1;
 }
 
-.container {
-  max-width: 400px;
+@keyframes pulse {
+  0% { transform: translate(-50%, -50%) scale(1); opacity: 0.05; }
+  50% { transform: translate(-50%, -50%) scale(1.1); opacity: 0.1; }
+  100% { transform: translate(-50%, -50%) scale(1); opacity: 0.05; }
 }
 
-/* Logo Styling */
-/* Logo Styling */
-.logo {
-  max-width: 300px;
-  width: 80%;
-  margin-bottom: 0; /* no extra space below */
-  filter: drop-shadow(0 0 10px rgba(255,255,255,0.8));
-}
-
-/* Subtitle Styling */
-.subtitle {
-  font-size: 18px;
-  color: #fff;
-  text-shadow: 0 0 8px rgba(255, 255, 255, 0.7);
-  margin-top: -60px; /* pulls text closer to the logo */
-}
-
-/* General button base style */
-.btn {
-  display: block;
-  width: 240px;
-  margin: 15px auto;
-  padding: 15px;
-  border-radius: 40px;
-  text-decoration: none;
-  font-size: 1.2rem;
-  font-weight: bold;
+header {
   text-align: center;
-  border: none;
+  padding: 50px 20px 20px;
+}
+
+header h1 {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #ff2d2d;
+  text-shadow: 0 0 15px #ff2d2d;
+}
+
+.btn {
+  background: linear-gradient(90deg, #6a11cb, #2575fc);
   color: white;
-  position: relative;
-  overflow: hidden;
-  z-index: 1;
+  padding: 12px 25px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: bold;
+  box-shadow: 0 0 10px #2575fc;
+  transition: 0.3s;
+}
+
+.btn:hover {
+  box-shadow: 0 0 20px #6a11cb;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+  padding: 40px;
+  max-width: 1200px;
+  margin: auto;
+}
+
+.card {
+  background: #141414;
+  border: 1px solid #ff2d2d55;
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0 0 10px #ff2d2d33;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-/* Animated glowing background for buttons */
-.btn::before {
-  content: "";
-  position: absolute;
-  top: -50%;
-  left: -50%;
-  width: 200%;
-  height: 200%;
-  background: linear-gradient(45deg, #ff0099, #493240, #00f0ff, #00ff88, #ff9900, #ff0000);
-  background-size: 400% 400%;
-  animation: glowing 6s linear infinite;
-  z-index: -1;
-  filter: blur(20px);
+.card1 {
+  background: #141414;
+  border: 1px solid #ff2d2d55;
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0 0 10px #ff2d2d33;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-/* Keyframes for glow animation */
-@keyframes glowing {
-  0% { background-position: 0% 50%; }
-  50% { background-position: 100% 50%; }
-  100% { background-position: 0% 50%; }
+.card2 {
+  background: #141414;
+  border: 1px solid #ff2d2d55;
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0 0 10px #ff2d2d33;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-/* Hover effect */
-.btn:hover {
-  transform: scale(1.08);
-  box-shadow: 0 0 25px rgba(255,255,255,0.7);
+.card3 {
+  background: #141414;
+  border: 1px solid #ff2d2d55;
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0 0 10px #ff2d2d33;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-/* Discord button */
-.discord {
-  background: #5865f2;
-  color: black;
-}
-.discord:hover {
-  background: #4752c4;
-}
-
-/* MAIN SITE button */
-.btn.main {
-  background: rgba(0, 195, 255, 0.2);
-  color: black;
+.card4 {
+  background: #141414;
+  border: 1px solid #ff2d2d55;
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0 0 10px #ff2d2d33;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-/* SITE 2 button */
-.btn.site2 {
-  background: rgba(255, 0, 170, 0.2);
-  color: black;
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 0 20px #ff2d2d66;
 }
 
-/* SITE 3 button */
-.btn.site3 {
-  background: rgba(0, 255, 136, 0.2);
-  color: black;
+.card1:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 0 20px #ff2d2d66;
 }
 
-/* Section title */
-.generators-title {
-  margin: 25px 0 10px;
-  font-size: 1.5rem;
-  text-shadow: 0 0 10px #fff, 0 0 20px #ff00aa, 0 0 40px #ff00aa;
+.card4:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 0 20px #ff2d2d66;
 }
 
-.bypasser-title {
-  margin: 25px 0 10px;
-  font-size: 1.5rem;
-  text-shadow: 0 0 10px #fff, 0 0 20px #ff00aa, 0 0 40px #ff00aa;
+.card2:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 0 20px #ff2d2d66;
+}
+
+.card3:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 0 20px #ff2d2d66;
+}
+
+.card h2 {
+  font-size: 1.3rem;
+  margin-bottom: 10px;
+  color: yellow;
+}
+
+.card1 h2 {
+  font-size: 1.3rem;
+  margin-bottom: 10px;
+  color: yellow;
+}
+
+.card2 h2 {
+  font-size: 1.3rem;
+  margin-bottom: 10px;
+  color: yellow;
+}
+
+.card3 h2 {
+  font-size: 1.3rem;
+  margin-bottom: 10px;
+  color: yellow;
+}
+
+.card4 h2 {
+  font-size: 1.3rem;
+  margin-bottom: 10px;
+  color: yellow;
+}
+
+.card ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.card1 ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.card1 ul li {
+  margin: 8px 0;
+  font-size: 0.95rem;
+}
+
+.card2 ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.card2 ul li {
+  margin: 8px 0;
+  font-size: 0.95rem;
+}
+
+.card3 ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.card3 ul li {
+  margin: 8px 0;
+  font-size: 0.95rem;
+}
+
+.card4 ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.card4 ul li {
+  margin: 8px 0;
+  font-size: 0.95rem;
+}
+
+.card ul li {
+  margin: 8px 0;
+  font-size: 0.95rem;
+}
+
+.cta {
+  margin-top: 15px;
+  display: inline-block;
+  background: #ff2d2d;
+  padding: 10px 15px;
+  border-radius: 6px;
+  font-weight: bold;
+  text-decoration: none;
+  color: white;
+  transition: 0.3s;
+}
+
+.cta:hover {
+  background: #ff5555;
+  box-shadow: 0 0 10px #ff2d2d;
 }
