@@ -109,21 +109,3 @@ header h1 {
   background: #ff5555;
   box-shadow: 0 0 10px #ff2d2d;
 }
-
-@media (max-width: 1200px) {
-  .cards {
-    grid-template-columns: repeat(3, 1fr); /* 3 cards sa medium screens */
-  }
-}
-
-@media (max-width: 768px) {
-  .cards {
-    grid-template-columns: repeat(2, 1fr); /* 2 cards sa tablet */
-  }
-}
-
-@media (max-width: 480px) {
-  .cards {
-    grid-template-columns: 1fr; /* 1 card sa mobile */
-  }
-}
