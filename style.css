@@ -109,20 +109,3 @@ header h1 {
   background: #ff5555;
   box-shadow: 0 0 10px #ff2d2d;
 }
-
-/* Force portrait when phone is in landscape */
-@media screen and (orientation: landscape) {
-  html, body {
-    width: 100vh;     /* swap width/height */
-    height: 100vw;
-    overflow-x: hidden;
-    overflow-y: auto; /* allow vertical scroll */
-  }
-  body {
-    transform: rotate(90deg);
-    transform-origin: left top;
-    position: absolute;
-    top: 0;
-    left: 100%;
-  }
-}
