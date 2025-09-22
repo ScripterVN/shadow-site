@@ -1,9 +1,15 @@
 body {
   margin: 0;
+  padding: 0;
   font-family: Arial, sans-serif;
   background: #0a0a0a;
   color: white;
   overflow-x: hidden;
+  transform: rotate(90deg);
+  transform-origin: left top;
+  position: absolute;
+  top: 0;
+  left: 100%;
 }
 
 /* 🔥 Fullscreen background image */
