@@ -6,19 +6,20 @@ body {
   overflow-x: hidden;
 }
 
-/* 🔥 Fullscreen background image */
+/* 🔥 Animated background logo */
 .background-logo {
   position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: url("images/logo1.gif") no-repeat center center fixed;
-  background-size: cover;
-  opacity: 0.9; /* strong visibility (adjust 0.8–1 as needed) */
+  top: 50%;
+  left: 50%;
+  width: 600px;
+  height: 600px;
+  background: url("images/logo1.gif") no-repeat center;
+  background-size: contain;
+  opacity: 0.05;
+  transform: translate(-50%, -50%) scale(1);
+  animation: pulse 8s infinite ease-in-out;
   z-index: -1;
 }
-
 
 @keyframes pulse {
   0% { transform: translate(-50%, -50%) scale(1); opacity: 0.05; }
@@ -55,10 +56,10 @@ header h1 {
 
 .grid {
   display: grid;
-  grid-template-columns: repeat(5, 1fr);
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   gap: 20px;
   padding: 40px;
-  max-width: 1200px; /* adjust overall width */
+  max-width: 1200px;
   margin: auto;
 }
 
@@ -79,7 +80,7 @@ header h1 {
 .card h2 {
   font-size: 1.3rem;
   margin-bottom: 10px;
-  color: yellow;
+  color: #ffcc00;
 }
 
 .card ul {
