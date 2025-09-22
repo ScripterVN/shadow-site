@@ -17,7 +17,6 @@ body {
   background-size: cover;
   opacity: 0.05;
   transform: translate(-50%, -50%) scale(1);
-  animation: pulse 8s infinite ease-in-out;
   z-index: -1;
 }
 
