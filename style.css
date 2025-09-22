@@ -1,15 +1,9 @@
 body {
   margin: 0;
-  padding: 0;
   font-family: Arial, sans-serif;
   background: #0a0a0a;
   color: white;
   overflow-x: hidden;
-  transform: rotate(90deg);
-  transform-origin: left top;
-  position: absolute;
-  top: 0;
-  left: 100%;
 }
 
 /* 🔥 Fullscreen background image */
@@ -61,10 +55,10 @@ header h1 {
 
 .grid {
   display: grid;
-  grid-template-columns: repeat(5, 1fr); /* 5 cards in one row */
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   gap: 20px;
   padding: 40px;
-  max-width: 1600px; /* adjust overall width */
+  max-width: 1200px; /* adjust overall width */
   margin: auto;
 }
 
