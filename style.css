@@ -109,3 +109,17 @@ header h1 {
   background: #ff5555;
   box-shadow: 0 0 10px #ff2d2d;
 }
+
+/* Normal portrait view */
+body {
+  margin: 0;
+  padding: 0;
+}
+
+/* If device is in landscape, rotate page */
+@media screen and (orientation: landscape) {
+  html, body {
+    width: 100vh;   /* swap width/height */
+    height: 100vw;
+    overflow: hidden;
+  }
