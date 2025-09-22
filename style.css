@@ -115,3 +115,11 @@ body {
   margin: 0;
   padding: 0;
 }
+
+/* If device is in landscape, rotate page */
+@media screen and (orientation: landscape) {
+  html, body {
+    width: 100vh;   /* swap width/height */
+    height: 100vw;
+    overflow: hidden;
+  }
